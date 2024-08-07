@@ -3,612 +3,690 @@
 
 <head>
     <meta charset="utf-8">
-    
+
     <!--====== Title ======-->
     <title>ExamX</title>
-    
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-        
+
     <!--====== Animate CSS ======-->
     <link rel="stylesheet" href="assets/css/animate.css">
-        
+
     <!--====== Magnific Popup CSS ======-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        
+
     <!--====== Slick CSS ======-->
     <link rel="stylesheet" href="assets/css/slick.css">
-        
+
     <!--====== Line Icons CSS ======-->
     <link rel="stylesheet" href="assets/css/LineIcons.css">
-        
+
     <!--====== Font Awesome CSS ======-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        
+
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
+
     <!--====== Default CSS ======-->
     <link rel="stylesheet" href="assets/css/default.css">
-    
+
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C73K27M5TM"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-C73K27M5TM');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-C73K27M5TM');
     </script>
 
-    
+
 </head>
 
 <body>
-    <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->    
-   
-   
-    <!--====== PRELOADER PART START ======-->
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
 
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
+
+<!--====== PRELOADER PART START ======-->
+
+<div class="preloader">
+    <div class="loader">
+        <div class="ytp-spinner">
+            <div class="ytp-spinner-container">
+                <div class="ytp-spinner-rotator">
+                    <div class="ytp-spinner-left">
+                        <div class="ytp-spinner-circle"></div>
+                    </div>
+                    <div class="ytp-spinner-right">
+                        <div class="ytp-spinner-circle"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"
+        data-cfasync="false"></script>
 <script>
-window.addEventListener('load', function(){
-  window.cookieconsent.initialise({
-   revokeBtn: "<div class='cc-revoke'></div>",
-   type: "opt-in",
-   theme: "classic",
-   palette: {
-       popup: {
-           background: "#000",
-           text: "#fff"
-        },
-       button: {
-           background: "#fd0",
-           text: "#000"
-        }
-    },
-   content: {
-       link: "Cookies",
-       href: "https://2gdpr.com/cookies"
-    },
-    onInitialise: function(status) {
-      if(status == cookieconsent.status.allow) myScripts();
-    },
-    onStatusChange: function(status) {
-      if (this.hasConsented()) myScripts();
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            revokeBtn: "<div class='cc-revoke'></div>",
+            type: "opt-in",
+            theme: "classic",
+            palette: {
+                popup: {
+                    background: "#000",
+                    text: "#fff"
+                },
+                button: {
+                    background: "#fd0",
+                    text: "#000"
+                }
+            },
+            content: {
+                link: "Cookies",
+                href: "https://2gdpr.com/cookies"
+            },
+            onInitialise: function (status) {
+                if (status == cookieconsent.status.allow) myScripts();
+            },
+            onStatusChange: function (status) {
+                if (this.hasConsented()) myScripts();
+            }
+        })
+    });
+
+    function myScripts() {
+
+        // Paste here your scripts that use cookies requiring consent. See examples below
+
+        // Google Analytics, you need to change 'UA-00000000-1' to your ID
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-00000000-1', 'auto');
+        ga('send', 'pageview');
+
+
+        // Facebook Pixel Code, you need to change '000000000000000' to your PixelID
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '000000000000000');
+        fbq('track', 'PageView');
+
     }
-  })
-});
-
-function myScripts() {
-
-   // Paste here your scripts that use cookies requiring consent. See examples below
-
-   // Google Analytics, you need to change 'UA-00000000-1' to your ID
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-00000000-1', 'auto');
-      ga('send', 'pageview');
-
-
-   // Facebook Pixel Code, you need to change '000000000000000' to your PixelID
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '000000000000000');
-      fbq('track', 'PageView');
-
-}
 </script>
 
-    <!--====== PRELOADER PART ENDS ======-->
-    
-    <!--====== HEADER PART START ======-->
-    
-    <header class="header-area">
-        <div class="navbar-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/images/logo-white.png" alt="Logo" style="width: 200px;">
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
+<!--====== PRELOADER PART ENDS ======-->
 
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ml-auto">
-                                    <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#features">Features</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#team">Team</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                            
-                        </nav> <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- navbar area -->
-        
-        <div id="home" class="header-hero bg_cover" style="background-image: url(assets/images/banner-bg.svg)">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="header-hero-content text-center">
-                            <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">ExamX</h3>
-                            <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Modern testing environment</h2>
-                            <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Our exam environment runs on both PCs and notebooks!</p>
-                            <a href="ExamX.zip" class="main-btn wow fadeInUp"
-                               data-wow-duration="1.3s" data-wow-delay="1.1s" download>Download the ExamX Client</a>
-                        </div> <!-- header hero content -->
-                    </div>
-                </div> <!-- row -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
-                            <img src="assets/images/header-hero1.png" alt="hero">
-                        </div> <!-- header hero image -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-            <div id="particles-1" class="particles"></div>
-        </div> <!-- header hero -->
-    </header>
-    
-    <!--====== HEADER PART ENDS ======-->
-    
-    <!--====== BRAMD PART START ======-->
-    
-    <div class="brand-area pt-90">
+<!--====== HEADER PART START ======-->
+
+<header class="header-area">
+    <div class="navbar-area">
         <div class="container">
-            <div class="section-title text-center pb-40" style="margin-top: 5%;">
-                <h2>Partners</h2>
-            </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="brand-logo d-flex align-items-center justify-content-center">
-                        <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                            <a href="https://www.htlrennweg.at"><img src="assets/images/htl3r.png" alt="HTL Rennweg" style="width: 193px"></a>
-                        </div> <!-- single logo -->
-                        <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                            <a href="https://www.easyname.at"><img src="assets/images/easyname.png" alt="easyname logo" style="width: 193px"></a>
-                        </div> <!-- single logo -->
-                    </div> <!-- brand logo -->
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/images/logo-white.png" alt="Logo" style="width: 200px;">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <ul id="nav" class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="page-scroll" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#features">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#team">Team</a>
+                                </li>
+                            </ul>
+                        </div> <!-- navbar collapse -->
+
+                    </nav> <!-- navbar -->
                 </div>
-            </div>   <!-- row -->
+            </div> <!-- row -->
         </div> <!-- container -->
-    </div>
-    
-    <!--====== BRAMD PART ENDS ======-->
-    
-    <!--====== SERVICES PART START ======-->
-    
-    <section id="features" class="services-area pt-120">
+    </div> <!-- navbar area -->
+
+    <div id="home" class="header-hero bg_cover" style="background-image: url(assets/images/banner-bg.svg)">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title text-center pb-40">
-                        <div class="line m-auto"></div>
-                        <h3 class="title">Cheating is not possible,<span> and our software is easy to use.</span></h3>
-                    </div> <!-- section title -->
+                <div class="col-lg-8">
+                    <div class="header-hero-content text-center">
+                        <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                            ExamX</h3>
+                        <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Modern
+                            testing environment</h2>
+                        <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Our exam environment
+                            runs on both PCs and notebooks!</p>
+                        <div style="margin-top: 30px">
+                            <a href="ExamX.zip" class="download-btn wow fadeInUp" data-wow-duration="1.3s"
+                               data-wow-delay="1.1s" download>Download the ExamX Client</a>
+                            <a href="https://esm.examx.at" target="_blank" class="main-btn wow fadeInUp"
+                               style="margin: 0"
+                               data-wow-duration="1.3s" data-wow-delay="1.1s">LogIn</a>
+                        </div>
+
+                    </div> <!-- header hero content -->
                 </div>
             </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7 col-sm-8">
-                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="services-icon">
-                            <img class="shape" src="assets/images/services-shape.svg" alt="shape">
-                            <img class="shape-1" src="assets/images/services-shape-3.svg" alt="shape">
-                            <i class="lni-bolt-alt"></i>
-                        </div>
-                        <div class="services-content mt-30">
-                            <h4 class="services-title"><a href="#">Provisioned VMs</a></h4>
-                            <p class="text">We provide a website where virtual machines can be requested. Students connect to the VM and there the testing takes place.</p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-8">
-                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="services-icon">
-                            <img class="shape" src="assets/images/services-shape.svg" alt="shape">
-                            <img class="shape-1" src="assets/images/services-shape-2.svg" alt="shape">
-                            <i class="lni-cog"></i>
-                        </div>
-                        <div class="services-content mt-30">
-                            <h4 class="services-title"><a href="#">Kiosk Mode</a></h4>
-                            <p class="text">Our software runs in kiosk mode, so a VM can only be accessed through it. Thus, students cannot use a file explorer, depriving them of a possibility to cheat.</p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-8">
-                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                        <div class="services-icon">
-                            <img class="shape" src="assets/images/services-shape.svg" alt="shape">
-                            <img class="shape-1" src="assets/images/services-shape-1.svg" alt="shape">
-                            <i class="lni-eye"></i>
-                        </div>
-                        <div class="services-content mt-30">
-                            <h4 class="services-title"><a href="#">Monitoring</a></h4>
-                            <p class="text">A simple monitoring program runs in the background so that cheating attempts can be detected quickly and countermeasures can be taken.</p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== SERVICES PART ENDS ======-->
-    
-    <!--====== ABOUT PART START ======-->
-    
-    <section id="about" class="about-area pt-70">
-        <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <div class="line"></div>
-                            <h3 class="title">Current Situation</h3>
-                        </div> <!-- section title -->
-                        <p class="text">Currently it is difficult to perform an audit, because to do it in a secure environment you need a room full of PCs running the latest updates. Doing an audit on a notebook you brought with you was not a good idea so far, because you can always open a file explorer and thus cheat.</p>
-                    </div> <!-- about content -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/icons/Current.png" alt="about">
-                    </div> <!-- about image -->
+                <div class="col-lg-12">
+                    <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s"
+                         data-wow-delay="1.4s">
+                        <img src="assets/images/header-hero1.png" alt="hero">
+                    </div> <!-- header hero image -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-        <div class="about-shape-1">
-            <img src="assets/images/about-shape-1.svg" alt="shape">
+        <div id="particles-1" class="particles"></div>
+    </div> <!-- header hero -->
+</header>
+
+<!--====== HEADER PART ENDS ======-->
+
+<!--====== BRAMD PART START ======-->
+
+<div class="brand-area pt-90">
+    <div class="container">
+        <div class="section-title text-center pb-40" style="margin-top: 5%;">
+            <h2>Partners</h2>
         </div>
-    </section>
-    
-    <!--====== ABOUT PART ENDS ======-->
-    
-    <!--====== ABOUT PART START ======-->
-    
-    <section class="about-area pt-70">
-        <div class="about-shape-2">
-            <img src="assets/images/about-shape-2.svg" alt="shape">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 order-lg-last">
-                    <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <div class="line"></div>
-                            <h3 class="title">Our Solution</h3>
-                        </div> <!-- section title -->
-                        <p class="text">We offer a solution to said problem. VM templates are provided for every possible type of testing. An examiner can now request as many VMs as he has examinees on our website. In the background clones are created from the template. The examinees boot into the kiosk mode during this time. After that IP addresses to the VMs are provided. Now you can connect to the VM via the IP and the test can begin.</p>
-                    </div> <!-- about content -->
-                </div>
-                <div class="col-lg-6 order-lg-first">
-                    <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/icons/Solution.png" alt="about">
-                    </div> <!-- about image -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-
-    <!--====== ABOUT PART START ======-->
-    
-    <section class="about-area pt-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <div class="line"></div>
-                            <h3 class="title">Monitoring</h3>
-                        </div> <!-- section title -->
-                        <p class="text">We have built an efficient monitoring to ensure that examx are conducted in a fair and compliant manner. The monitoring also ensures that no network connections can be established between the individual VMs. Furthermore, the monitoring provides reporting and alerting so that an admin can be notified of certain events.</p>
-                    </div> <!-- about content -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/icons/Monitoring.png" alt="about">
-                    </div> <!-- about image -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="about-shape-1">
-            <img src="assets/images/about-shape-1.svg" alt="shape">
-        </div>
-    </section>
-    
-    <!--====== ABOUT PART ENDS ======-->
-
-    <section class="about-area pt-70">
-        <div class="about-shape-2">
-            <img src="assets/images/about-shape-2.svg" alt="shape">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 order-lg-last">
-                    <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <div class="line"></div>
-                            <h3 class="title">Watch our Live Demo!</h3>
-                        </div> <!-- section title -->
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/LCa-7XSqm9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
-                        </div>
-                    </div> <!-- about content -->
-                </div>
-                <div class="col-lg-6 order-lg-first">
-                    <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/images/about2.svg" alt="about">
-                    </div> <!-- about image -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-
-
-        <section class="about-area pt-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <div class="section-title">
-                                <div class="line"></div>
-                                <h3 class="title">Co2 Saving plan</h3>
-                            </div> <!-- section title -->
-                            <p class="text">Learn more about the ExamX Co2 saving plan. By using our modern exam environment your institution is saving a lot of energy to the energy efficiency of laptops. Workstations consume much more energy and are much more harmful to the environment in the production. Thus creating a much higher carbon footprint.</p>
-                            <a href="co2.html" class="main-btn wow fadeInUp"
-                               data-wow-duration="1.3s" data-wow-delay="1.1s">Read more</a>
-                        </div> <!-- about content -->
-
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <img src="assets/images/Co2_Transparent.png" alt="about">
-                        </div> <!-- about image -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-            <div class="about-shape-1">
-                <img src="assets/images/about-shape-1.svg" alt="shape">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="brand-logo d-flex align-items-center justify-content-center">
+                    <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                        <a href="https://www.htlrennweg.at"><img src="assets/images/htl3r.png" alt="HTL Rennweg"
+                                                                 style="width: 193px"></a>
+                    </div> <!-- single logo -->
+                    <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                        <a href="https://www.easyname.at"><img src="assets/images/easyname.png" alt="easyname logo"
+                                                               style="width: 193px"></a>
+                    </div> <!-- single logo -->
+                </div> <!-- brand logo -->
             </div>
-        </section>
+        </div>   <!-- row -->
+    </div> <!-- container -->
+</div>
 
-    </section>
-    
-    <!--====== ABOUT PART ENDS ======-->
-    
-    <!--====== TEAM PART START ======-->
-    
-    <section id="team" class="team-area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <div class="section-title text-center pb-30">
-                        <div class="line m-auto"></div>
-                        <h3 class="title"><span>Meet Our</span> Aspiring Team</h3>
+<!--====== BRAMD PART ENDS ======-->
+
+<!--====== SERVICES PART START ======-->
+
+<section id="features" class="services-area pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-title text-center pb-40">
+                    <div class="line m-auto"></div>
+                    <h3 class="title">Cheating is not possible,<span> and our software is easy to use.</span></h3>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="services-icon">
+                        <img class="shape" src="assets/images/services-shape.svg" alt="shape">
+                        <img class="shape-1" src="assets/images/services-shape-3.svg" alt="shape">
+                        <i class="lni-bolt-alt"></i>
+                    </div>
+                    <div class="services-content mt-30">
+                        <h4 class="services-title"><a href="#">Provisioned VMs</a></h4>
+                        <p class="text">We provide a website where virtual machines can be requested. Students connect
+                            to the VM and there the testing takes place.</p>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="services-icon">
+                        <img class="shape" src="assets/images/services-shape.svg" alt="shape">
+                        <img class="shape-1" src="assets/images/services-shape-2.svg" alt="shape">
+                        <i class="lni-cog"></i>
+                    </div>
+                    <div class="services-content mt-30">
+                        <h4 class="services-title"><a href="#">Kiosk Mode</a></h4>
+                        <p class="text">Our software runs in kiosk mode, so a VM can only be accessed through it. Thus,
+                            students cannot use a file explorer, depriving them of a possibility to cheat.</p>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                    <div class="services-icon">
+                        <img class="shape" src="assets/images/services-shape.svg" alt="shape">
+                        <img class="shape-1" src="assets/images/services-shape-1.svg" alt="shape">
+                        <i class="lni-eye"></i>
+                    </div>
+                    <div class="services-content mt-30">
+                        <h4 class="services-title"><a href="#">Monitoring</a></h4>
+                        <p class="text">A simple monitoring program runs in the background so that cheating attempts can
+                            be detected quickly and countermeasures can be taken.</p>
+                    </div>
+                </div> <!-- single services -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== SERVICES PART ENDS ======-->
+
+<!--====== ABOUT PART START ======-->
+
+<section id="about" class="about-area pt-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h3 class="title">Current Situation</h3>
                     </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-7 col-sm-5">
-                    <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="team-image">
-                            <img src="assets/images/burger.jpeg" alt="Team">
-                            <div class="social">
-                                <ul>
-                                    <li><a href="https://github.com/ProRedMax"><i class="lni-github-original"></i></a></li>
-                                    <li><a href="https://www.instagram.com/maxx.bur/"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/maximilian-burger-81a9581b3/"><i class="lni-linkedin-original"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h5 class="holder-name">Maximilian Burger</h5>
-                            <p class="text">Project Manager</p>
-                        </div>
-                    </div> <!-- single team -->
-                </div>
-                <div class="col-lg-3 col-md-7 col-sm-5">
-                    <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="team-image">
-                            <img src="assets/images/rigler.jpg" alt="Team">
-                            <div class="social">
-                                <ul>
-                                    <li><a href="https://github.com/rigler-tobias"><i class="lni-github-original"></i></a></li>
-                                    <li><a href="https://www.instagram.com/tobi.rigler/"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/tobias-rigler-5531081a4"><i class="lni-linkedin-original"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h5 class="holder-name">Tobias Rigler</h5>
-                            <p class="text">Deputy Project Manager</p>
-                        </div>
-                    </div> <!-- single team -->
-                </div>
-                <div class="col-lg-3 col-md-7 col-sm-5">
-                    <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="team-image">
-                            <img src="assets/images/ehrenstrasser.jpg" alt="Team">
-                            <div class="social">
-                                <ul>
-                                    <li><a href="https://github.com/Jakob-Ehrenstrasser"><i class="lni-github-original"></i></a></li>
-                                    <li><a href="https://www.instagram.com/jakob.ehr/"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/jakob-ehrenstrasser-ab9890200/"><i class="lni-linkedin-original"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h5 class="holder-name">Jakob Ehrenstrasser</h5>
-                            <p class="text">Developer</p>
-                        </div>
-                    </div> <!-- single team -->
-                </div>
-                <div class="col-lg-3 col-md-7 col-sm-5">
-                    <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="team-image">
-                            <img src="assets/images/wehofer.jpeg" alt="Team">
-                            <div class="social">
-                                <ul>
-                                    <li><a href="https://github.com/elias-wehofer"><i class="lni-github-original"></i></a></li>
-                                    <li><a href="https://www.instagram.com/elias.wfr/"><i class="lni-instagram-filled"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/elias-wehofer-91b43823a/"><i class="lni-linkedin-original"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h5 class="holder-name">Elias Wehofer</h5>
-                            <p class="text">Developer</p>
-                        </div>
-                    </div> <!-- single team -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== TEAM PART ENDS ======-->
-    
-    
-    <!--====== FOOTER PART START ======-->
-    
-    <footer id="footer" class="footer-area pt-120">
+                    <p class="text">Currently it is difficult to perform an audit, because to do it in a secure
+                        environment you need a room full of PCs running the latest updates. Doing an audit on a notebook
+                        you brought with you was not a good idea so far, because you can always open a file explorer and
+                        thus cheat.</p>
+                </div> <!-- about content -->
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s"
+                     data-wow-delay="0.5s">
+                    <img src="assets/icons/Current.png" alt="about">
+                </div> <!-- about image -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <div class="about-shape-1">
+        <img src="assets/images/about-shape-1.svg" alt="shape">
+    </div>
+</section>
+
+<!--====== ABOUT PART ENDS ======-->
+
+<!--====== ABOUT PART START ======-->
+
+<section class="about-area pt-70">
+    <div class="about-shape-2">
+        <img src="assets/images/about-shape-2.svg" alt="shape">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 order-lg-last">
+                <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h3 class="title">Our Solution</h3>
+                    </div> <!-- section title -->
+                    <p class="text">We offer a solution to said problem. VM templates are provided for every possible
+                        type of testing. An examiner can now request as many VMs as he has examinees on our website. In
+                        the background clones are created from the template. The examinees boot into the kiosk mode
+                        during this time. After that IP addresses to the VMs are provided. Now you can connect to the VM
+                        via the IP and the test can begin.</p>
+                </div> <!-- about content -->
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s"
+                     data-wow-delay="0.5s">
+                    <img src="assets/icons/Solution.png" alt="about">
+                </div> <!-- about image -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+
+<!--====== ABOUT PART START ======-->
+
+<section class="about-area pt-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h3 class="title">Monitoring</h3>
+                    </div> <!-- section title -->
+                    <p class="text">We have built an efficient monitoring to ensure that examx are conducted in a fair
+                        and compliant manner. The monitoring also ensures that no network connections can be established
+                        between the individual VMs. Furthermore, the monitoring provides reporting and alerting so that
+                        an admin can be notified of certain events.</p>
+                </div> <!-- about content -->
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s"
+                     data-wow-delay="0.5s">
+                    <img src="assets/icons/Monitoring.png" alt="about">
+                </div> <!-- about image -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <div class="about-shape-1">
+        <img src="assets/images/about-shape-1.svg" alt="shape">
+    </div>
+</section>
+
+<!--====== ABOUT PART ENDS ======-->
+
+<section class="about-area pt-70">
+    <div class="about-shape-2">
+        <img src="assets/images/about-shape-2.svg" alt="shape">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 order-lg-last">
+                <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h3 class="title">Watch our Live Demo!</h3>
+                    </div> <!-- section title -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/LCa-7XSqm9g" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                allowfullscreen></iframe>
+                    </div>
+                </div> <!-- about content -->
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s"
+                     data-wow-delay="0.5s">
+                    <img src="assets/images/about2.svg" alt="about">
+                </div> <!-- about image -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+
+
+    <section class="about-area pt-70">
         <div class="container">
-            <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                <div class="row" style="justify-content: center;">
-                    <div class="col-lg-6">
-                        <div class="subscribe-content mt-45">
-                            <h2 class="subscribe-title" style="text-align: center;"><span>Do you like what you hear?</span> Contact us! <a href="mailto:office@examx.at">office@examx.at</a></h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="section-title">
+                            <div class="line"></div>
+                            <h3 class="title">Co2 Saving plan</h3>
+                        </div> <!-- section title -->
+                        <p class="text">Learn more about the ExamX Co2 saving plan. By using our modern exam environment
+                            your institution is saving a lot of energy to the energy efficiency of laptops. Workstations
+                            consume much more energy and are much more harmful to the environment in the production.
+                            Thus creating a much higher carbon footprint.</p>
+                        <a href="co2.html" class="main-btn wow fadeInUp"
+                           data-wow-duration="1.3s" data-wow-delay="1.1s">Read more</a>
+                    </div> <!-- about content -->
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s"
+                         data-wow-delay="0.5s">
+                        <img src="assets/images/Co2_Transparent.png" alt="about">
+                    </div> <!-- about image -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="about-shape-1">
+            <img src="assets/images/about-shape-1.svg" alt="shape">
+        </div>
+    </section>
+
+</section>
+
+<!--====== ABOUT PART ENDS ======-->
+
+<!--====== TEAM PART START ======-->
+
+<section id="team" class="team-area pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="section-title text-center pb-30">
+                    <div class="line m-auto"></div>
+                    <h3 class="title"><span>Meet Our</span> Aspiring Team</h3>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-7 col-sm-5">
+                <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="team-image">
+                        <img src="assets/images/burger.jpeg" alt="Team">
+                        <div class="social">
+                            <ul>
+                                <li><a href="https://github.com/ProRedMax"><i class="lni-github-original"></i></a></li>
+                                <li><a href="https://www.instagram.com/maxx.bur/"><i
+                                        class="lni-instagram-filled"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/maximilian-burger-81a9581b3/"><i
+                                        class="lni-linkedin-original"></i></a></li>
+                            </ul>
                         </div>
                     </div>
-                 </div> <!-- row -->
-            </div> <!-- subscribe area -->
-            <div class="footer-widget pb-100" style="padding-top: 200px;">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <a class="logo" href="#">
-                                <img src="assets/images/logo-white.png" alt="logo">
-                            </a>
-                            <p class="text">We are a modern testing environment. We use new technology to ensure to have the best quality for our customers!</p>
-                            <ul class="social">
-                                <li><a href="https://gitlab.com/HTL-Rennweg/itp2021/examx"><i class="lni-github-original"></i></a></li>
-                                <li><a href="https://www.instagram.com/examx.at/"><i class="lni-instagram-filled"></i></a></li>
+                    <div class="team-content">
+                        <h5 class="holder-name">Maximilian Burger</h5>
+                        <p class="text">Project Manager</p>
+                    </div>
+                </div> <!-- single team -->
+            </div>
+            <div class="col-lg-3 col-md-7 col-sm-5">
+                <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="team-image">
+                        <img src="assets/images/rigler.jpg" alt="Team">
+                        <div class="social">
+                            <ul>
+                                <li><a href="https://github.com/rigler-tobias"><i class="lni-github-original"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/tobi.rigler/"><i
+                                        class="lni-instagram-filled"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/tobias-rigler-5531081a4"><i
+                                        class="lni-linkedin-original"></i></a></li>
                             </ul>
-                        </div> <!-- footer about -->
+                        </div>
                     </div>
-                    <div class="col-lg-5 col-md-7 col-sm-7">
-                        <div class="footer-link d-flex mt-50 justify-content-md-between">
-                            <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                                <div class="footer-title">
-                                    <h4 class="title">Quick Link</h4>
-                                </div>
-                                <ul class="link">
-                                    <li><a href="#home" class="page-scroll">Home</a></li>
-                                    <li><a href="#features" class="page-scroll">Features</a></li>
-                                    <li><a href="#about" class="page-scroll">About</a></li>
-                                    <li><a href="#team" class="page-scroll">Team</a></li>
-                                    <li><a href="imprint.html#A">Imprint</a></li>
-                                </ul>
-                            </div> <!-- footer wrapper -->
-                            <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                                <div class="footer-title">
-                                    <h4 class="title">Our Projects</h4>
-                                </div>
-                                <ul class="link">
-                                    <li><a href="https://www.klimostat.at">Klimostat 2.0</a></li>
-                                    <li><a href="https://github.com/alex-hiermann/simpleTeam">Simple Team</a></li>
-                                    <li><a href="https://www.helpupil.at">Helpupil</a></li>
-                                </ul>
-                            </div> <!-- footer wrapper -->
-                        </div> <!-- footer link -->
+                    <div class="team-content">
+                        <h5 class="holder-name">Tobias Rigler</h5>
+                        <p class="text">Deputy Project Manager</p>
                     </div>
-                    <div class="col-lg-3 col-md-5 col-sm-5">
-                        <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                </div> <!-- single team -->
+            </div>
+            <div class="col-lg-3 col-md-7 col-sm-5">
+                <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="team-image">
+                        <img src="assets/images/ehrenstrasser.jpg" alt="Team">
+                        <div class="social">
+                            <ul>
+                                <li><a href="https://github.com/Jakob-Ehrenstrasser"><i class="lni-github-original"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/jakob.ehr/"><i class="lni-instagram-filled"></i></a>
+                                </li>
+                                <li><a href="https://www.linkedin.com/in/jakob-ehrenstrasser-ab9890200/"><i
+                                        class="lni-linkedin-original"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <h5 class="holder-name">Jakob Ehrenstrasser</h5>
+                        <p class="text">Developer</p>
+                    </div>
+                </div> <!-- single team -->
+            </div>
+            <div class="col-lg-3 col-md-7 col-sm-5">
+                <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="team-image">
+                        <img src="assets/images/wehofer.jpeg" alt="Team">
+                        <div class="social">
+                            <ul>
+                                <li><a href="https://github.com/elias-wehofer"><i class="lni-github-original"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/elias.wfr/"><i class="lni-instagram-filled"></i></a>
+                                </li>
+                                <li><a href="https://www.linkedin.com/in/elias-wehofer-91b43823a/"><i
+                                        class="lni-linkedin-original"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <h5 class="holder-name">Elias Wehofer</h5>
+                        <p class="text">Developer</p>
+                    </div>
+                </div> <!-- single team -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== TEAM PART ENDS ======-->
+
+
+<!--====== FOOTER PART START ======-->
+
+<footer id="footer" class="footer-area pt-120">
+    <div class="container">
+        <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="row" style="justify-content: center;">
+                <div class="col-lg-6">
+                    <div class="subscribe-content mt-45">
+                        <h2 class="subscribe-title" style="text-align: center;"><span>Do you like what you hear?</span>
+                            Contact us! <a href="mailto:office@examx.at">office@examx.at</a></h2>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- subscribe area -->
+        <div class="footer-widget pb-100" style="padding-top: 200px;">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <a class="logo" href="#">
+                            <img src="assets/images/logo-white.png" alt="logo">
+                        </a>
+                        <p class="text">We are a modern testing environment. We use new technology to ensure to have the
+                            best quality for our customers!</p>
+                        <ul class="social">
+                            <li><a href="https://gitlab.com/HTL-Rennweg/itp2021/examx"><i
+                                    class="lni-github-original"></i></a></li>
+                            <li><a href="https://www.instagram.com/examx.at/"><i class="lni-instagram-filled"></i></a>
+                            </li>
+                        </ul>
+                    </div> <!-- footer about -->
+                </div>
+                <div class="col-lg-5 col-md-7 col-sm-7">
+                    <div class="footer-link d-flex mt-50 justify-content-md-between">
+                        <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
                             <div class="footer-title">
-                                <h4 class="title">Contact Us</h4>
+                                <h4 class="title">Quick Link</h4>
                             </div>
-                            <ul class="contact">
-                                <li><a href="https://www.htlrennweg.at" style="color: white;">HTL Rennweg</a></li>
-                                <li><a href="mailto:office@examx.at" style="color: white;">office@examx.at</a></li>
-                                <li>Rennweg 89b<br>1030 Wien<br>Austria</li>
+                            <ul class="link">
+                                <li><a href="#home" class="page-scroll">Home</a></li>
+                                <li><a href="#features" class="page-scroll">Features</a></li>
+                                <li><a href="#about" class="page-scroll">About</a></li>
+                                <li><a href="#team" class="page-scroll">Team</a></li>
+                                <li><a href="imprint.html#A">Imprint</a></li>
                             </ul>
-                        </div> <!-- footer contact -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- footer widget -->
-            <div class="footer-copyright">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright d-sm-flex justify-content-between">
-                            <div class="copyright-content">
-                                <p class="text">Designed and Developed by <a href="https://examx.at" rel="nofollow">ExamX</a></p>
-                            </div> <!-- copyright content -->
-                        </div> <!-- copyright -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- footer copyright -->
-        </div> <!-- container -->
-        <div id="particles-2"></div>
-    </footer>
-    
-    <!--====== FOOTER PART ENDS ======-->
-    
-    <!--====== BACK TOP TOP PART START ======-->
+                        </div> <!-- footer wrapper -->
+                        <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <div class="footer-title">
+                                <h4 class="title">Our Projects</h4>
+                            </div>
+                            <ul class="link">
+                                <li><a href="https://www.klimostat.at">Klimostat 2.0</a></li>
+                                <li><a href="https://github.com/alex-hiermann/simpleTeam">Simple Team</a></li>
+                                <li><a href="https://www.helpupil.at">Helpupil</a></li>
+                            </ul>
+                        </div> <!-- footer wrapper -->
+                    </div> <!-- footer link -->
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-5">
+                    <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                        <div class="footer-title">
+                            <h4 class="title">Contact Us</h4>
+                        </div>
+                        <ul class="contact">
+                            <li><a href="https://www.htlrennweg.at" style="color: white;">HTL Rennweg</a></li>
+                            <li><a href="mailto:office@examx.at" style="color: white;">office@examx.at</a></li>
+                            <li>Rennweg 89b<br>1030 Wien<br>Austria</li>
+                        </ul>
+                    </div> <!-- footer contact -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- footer widget -->
+        <div class="footer-copyright">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright d-sm-flex justify-content-between">
+                        <div class="copyright-content">
+                            <p class="text">Designed and Developed by <a href="https://examx.at"
+                                                                         rel="nofollow">ExamX</a></p>
+                        </div> <!-- copyright content -->
+                    </div> <!-- copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- footer copyright -->
+    </div> <!-- container -->
+    <div id="particles-2"></div>
+</footer>
 
-    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+<!--====== FOOTER PART ENDS ======-->
 
-    <!--====== BACK TOP TOP PART ENDS ======-->   
-    
-    <!--====== PART START ======-->
-    
+<!--====== BACK TOP TOP PART START ======-->
+
+<a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+<!--====== BACK TOP TOP PART ENDS ======-->
+
+<!--====== PART START ======-->
+
 <!--
     <section class="">
         <div class="container">
@@ -618,49 +696,47 @@ function myScripts() {
         </div>
     </section>
 -->
-    
-    <!--====== PART ENDS ======-->
+
+<!--====== PART ENDS ======-->
 
 
+<!--====== Jquery js ======-->
+<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
 
+<!--====== Bootstrap js ======-->
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
-    <!--====== Jquery js ======-->
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    
-    <!--====== Plugins js ======-->
-    <script src="assets/js/plugins.js"></script>
-    
-    <!--====== Slick js ======-->
-    <script src="assets/js/slick.min.js"></script>
-    
-    <!--====== Ajax Contact js ======-->
-    <script src="assets/js/ajax-contact.js"></script>
-    
-    <!--====== Counter Up js ======-->
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    
-    <!--====== Magnific Popup js ======-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    
-    <!--====== Scrolling Nav js ======-->
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/scrolling-nav.js"></script>
-    
-    <!--====== wow js ======-->
-    <script src="assets/js/wow.min.js"></script>
-    
-    <!--====== Particles js ======-->
-    <script src="assets/js/particles.min.js"></script>
-    
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
-    
+<!--====== Plugins js ======-->
+<script src="assets/js/plugins.js"></script>
+
+<!--====== Slick js ======-->
+<script src="assets/js/slick.min.js"></script>
+
+<!--====== Ajax Contact js ======-->
+<script src="assets/js/ajax-contact.js"></script>
+
+<!--====== Counter Up js ======-->
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+
+<!--====== Magnific Popup js ======-->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+<!--====== Scrolling Nav js ======-->
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/scrolling-nav.js"></script>
+
+<!--====== wow js ======-->
+<script src="assets/js/wow.min.js"></script>
+
+<!--====== Particles js ======-->
+<script src="assets/js/particles.min.js"></script>
+
+<!--====== Main js ======-->
+<script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
