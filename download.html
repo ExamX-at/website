@@ -26,12 +26,14 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
+
         /* Download section with white background and ample padding from the header */
         .download-section {
             background-color: #fff;
             padding: 120px 20px 40px; /* 120px on top, 40px on bottom */
             text-align: center;
         }
+
         .download-btn {
             background-color: #007BFF;
             color: white;
@@ -43,14 +45,17 @@
             margin-top: 20px;
             display: inline-block;
         }
+
         .download-btn:hover {
             background-color: #0056b3;
         }
+
         .hash-info {
             margin-top: 20px;
             font-size: 0.9em;
             color: #555;
         }
+
         /* Container for info cards displayed side-by-side */
         .info-cards {
             margin-top: 40px;
@@ -59,24 +64,28 @@
             justify-content: center;
             gap: 20px;
         }
+
         .card {
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             flex: 1 1 300px;
             max-width: 48%;
             box-sizing: border-box;
         }
+
         .card h4 {
             margin-bottom: 20px;
             font-size: 1.3em;
         }
+
         .card p {
             font-size: 1em;
             color: #333;
             line-height: 1.6;
         }
+
         /* Container for the YouTube video */
         .video-container {
             margin-top: 50px;
@@ -84,12 +93,14 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .video-container iframe {
             width: 100%;
             height: 390px;
             border: none;
             border-radius: 10px;
         }
+
         /* Footer styling */
         .footer-area {
             padding-top: 40px;
@@ -99,108 +110,150 @@
 </head>
 
 <body>
-    <!-- Preloader (optional) -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
+<!-- Preloader (optional) -->
+<div class="preloader">
+    <div class="loader">
+        <div class="ytp-spinner">
+            <div class="ytp-spinner-container">
+                <div class="ytp-spinner-rotator">
+                    <div class="ytp-spinner-left">
+                        <div class="ytp-spinner-circle"></div>
+                    </div>
+                    <div class="ytp-spinner-right">
+                        <div class="ytp-spinner-circle"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Header -->
-    <header class="header-area">
-        <div class="navbar-area">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/images/logo-black.png" alt="Logo" style="width:200px;">
-                    </a>
-                </nav>
-            </div>
+<!-- Header -->
+<header class="header-area">
+    <div class="navbar-area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo-black.png" alt="Logo" style="width:200px;">
+                </a>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Download Section -->
-    <section class="download-section">
-        <h1 class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="margin-top: 4%">Download ExamX</h1>
-        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-            By downloading ExamX, you're making a strong statement for your future. Our modern exam environment offers you security, fairness, and a pathway to success – with no compromises.
-        </p>
-        <a href="https://downloads.examx.at/newest/ExamXSetup.msi" class="download-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.6s">
-            Download ExamX Client
-        </a>
-        <div class="hash-info wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-            <strong>File Hash:</strong> <span id="fileHash">Loading Hash...</span>
-        </div>
-        <!-- Info Cards Container -->
+<!-- Download Section -->
+<section class="download-section">
+    <h1 class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="margin-top: 4%">Download ExamX</h1>
+    <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
+        By downloading ExamX, you're making a strong statement for your future. Our modern exam environment offers you
+        security, fairness, and a pathway to success – with no compromises.
+    </p>
+    <a href="https://downloads.examx.at/newest/ExamXSetup.msi" class="download-btn wow fadeInUp"
+       data-wow-duration="1.3s" data-wow-delay="0.6s">
+        Download ExamX Client
+    </a>
+    <div class="hash-info wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
+        <strong>File Hash:</strong> <span id="fileHash">Loading Hash...</span>
+    </div>
+    <!-- Info Cards Container -->
+    <div style="max-width: 1200px; margin: 0 auto;">
         <div class="info-cards">
             <div class="card wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s">
                 <h4><i class="lni-download"></i> How to Install ExamX</h4>
                 <p>
-                    Click the download button to launch the installer. Follow the on-screen instructions – it’s simple and intuitive. A desktop shortcut will be automatically created for easy access.
+                    Click the download button to launch the installer. Follow the on-screen instructions – it’s simple
+                    and
+                    intuitive. A desktop shortcut will be automatically created for easy access.
                 </p>
             </div>
             <div class="card wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.2s">
                 <h4><i class="lni-checkmark-circle"></i> Why Choose ExamX?</h4>
                 <p>
-                    ExamX prepares you for the exam world of tomorrow. Our platform ensures that cheating is impossible while providing a user-friendly interface that won’t overwhelm you. Experience modern technology that revolutionizes your exam day and gives you a competitive edge.
+                    ExamX prepares you for the exam world of tomorrow. Our platform ensures that cheating is impossible
+                    while providing a user-friendly interface that won’t overwhelm you. Experience modern technology
+                    that
+                    revolutionizes your exam day and gives you a competitive edge.
                 </p>
             </div>
         </div>
+
+
+        <div class="info-section"
+             style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: stretch; margin-top: 40px;">
+
+            <!-- Anleitung -->
+            <div class="instructions wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.3s"
+                 style="flex: 1 1 45%; text-align: center; padding: 30px; background-color: #f9f9f9; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h4 style="font-size: 1.8em; margin-bottom: 20px; color: #007BFF;">
+                    <i class="lni-graduation" style="font-size: 1.5em; margin-right: 10px; vertical-align: middle;"></i>
+                    How to Use ExamX
+                </h4>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 15px; color: #333;">
+                    Once you start the application, ExamX runs essential checks in the background to ensure a secure and
+                    compliant exam environment (such as VM and RDP checks). Before each exam, you must log in using your
+                    credentials provided by your school and enter the exam code given by your teacher.
+                </p>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 15px; color: #333;">
+                    Your school or institution will have already created your account, and login details should have
+                    been sent to your institutional email, including a link to reset your password. It is recommended
+                    that you set your own password as soon as possible.
+                </p>
+                <p style="font-size: 1.1em; line-height: 1.8; color: #333;">
+                    You can change your password at any time. However, if you forget your password, you must contact
+                    your teacher or the institution’s ExamX administrator to reset it.
+                </p>
+            </div>
+
+        </div>
+
+
         <!-- YouTube Video -->
-        <div class="video-container wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s">
+        <div class="video-container wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s"
+             style="flex: 1 1 50%; padding: 20px; background-color: #f9f9f9; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); min-height: 400px; display: flex; align-items: center; justify-content: center;">
             <iframe src="https://www.youtube.com/embed/LCa-7XSqm9g" title="ExamX Demo Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
+                    style="width: 100%; height: 100%; min-height: 400px; aspect-ratio: 16/9; border-radius: 10px;"
+                    allowfullscreen></iframe>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer-area">
-        <div class="container">
-            <p class="text-center">Designed and Developed by <a href="https://examx.at" rel="nofollow">ExamX</a></p>
-        </div>
-    </footer>
+</section>
 
-    <!-- JavaScript Files -->
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/ajax-contact.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/scrolling-nav.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/particles.min.js"></script>
-    <script src="assets/js/main.js"></script>
+<!-- Footer -->
+<footer class="footer-area">
+    <div class="container">
+        <p class="text-center">Designed and Developed by <a href="https://examx.at" rel="nofollow">ExamX</a></p>
+    </div>
+</footer>
 
-    <!-- Dynamically load the file hash from version.json -->
-    <script>
-        fetch('https://downloads.examx.at/newest/version.json')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('fileHash').textContent = data.hash;
-            })
-            .catch(error => {
-                document.getElementById('fileHash').textContent = 'Error loading hash';
-                console.error('Error fetching hash:', error);
-            });
-    </script>
+<!-- JavaScript Files -->
+<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/ajax-contact.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/scrolling-nav.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/particles.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Dynamically load the file hash from version.json -->
+<script>
+    fetch('https://downloads.examx.at/newest/version.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('fileHash').textContent = data.hash;
+        })
+        .catch(error => {
+            document.getElementById('fileHash').textContent = 'Error loading hash';
+            console.error('Error fetching hash:', error);
+        });
+</script>
 </body>
 
 </html>
