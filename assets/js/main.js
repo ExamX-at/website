@@ -11,8 +11,13 @@ $(function () {
 
     //===== Sticky
 
-    $(window).on('scroll', function (event) {
-        var scroll = $(window).scrollTop();
+$(window).on('scroll', function (event) {
+    var scroll = $(window).scrollTop();
+    if (window.location.pathname.indexOf('download') !== -1) {
+        // Auf der Download-Seite: immer das schwarze Logo
+        $(".navbar-area").addClass("sticky");
+        $(".navbar .navbar-brand img").attr("src", "assets/images/logo-black.png");
+    } else {
         if (scroll < 20) {
             $(".navbar-area").removeClass("sticky");
             $(".navbar .navbar-brand img").attr("src", "assets/images/logo-white.png");
@@ -20,7 +25,9 @@ $(function () {
             $(".navbar-area").addClass("sticky");
             $(".navbar .navbar-brand img").attr("src", "assets/images/logo-black.png");
         }
-    });
+    }
+});
+
 
 
 
