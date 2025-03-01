@@ -154,10 +154,12 @@
     </a>
     <div class="hash-info wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
         <strong>File Hash:</strong> <span id="fileHash">Loading Hash...</span>
+        <strong>Version:</strong> <span id="versionField">Loading Version...</span>
+
     </div>
 
-<div class="system-requirements wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s"
-     style="
+    <div class="system-requirements wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s"
+         style="
        margin: 30px auto 0 auto;
        max-width: 600px;
        text-align: center;
@@ -166,29 +168,29 @@
        border-radius: 10px;
        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
      ">
-    <h4 style="font-size: 1.3em; margin-bottom: 15px; color: #007BFF;">
-        <i class="lni-cog" style="margin-right: 5px; font-size: 1.2em;"></i>
-        Minimum System Requirements
-    </h4>
-    <ul style="list-style-type: none; padding: 0; margin: 0;">
-        <li style="margin-bottom: 8px;">
-            <i class="lni-checkmark-circle" style="color: #007BFF; margin-right: 5px;"></i>
-            Windows 10 Pro (Version 20H2 or later) or Windows 11 Pro
-        </li>
-        <li style="margin-bottom: 8px;">
-            <i class="lni-checkmark-circle" style="color: #007BFF; margin-right: 5px;"></i>
-            6 GB RAM
-        </li>
-        <li style="margin-bottom: 8px;">
-            <i class="lni-checkmark-circle" style="color: #007BFF; margin-right: 5px;"></i>
-            500 MB of free disk space
-        </li>
-        <li>
-            <i class="lni-checkmark-circle" style="color: #007BFF; margin-right: 5px;"></i>
-            Stable network connection
-        </li>
-    </ul>
-</div>
+        <h4 style="font-size: 1.3em; margin-bottom: 15px; color: #007BFF;">
+            <i class="lni-cog" style="margin-right: 5px; font-size: 1.2em;"></i>
+            Minimum System Requirements
+        </h4>
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;">
+                <i class="lni-checkmark-circle" style="color: #007BFF; margin-right: 5px;"></i>
+                Windows 10 Pro (Version 20H2 or later) or Windows 11 Pro
+            </li>
+            <li style="margin-bottom: 8px;">
+                <i class="lni-checkmark-circle" style="color: #007BFF; margin-right: 5px;"></i>
+                6 GB RAM
+            </li>
+            <li style="margin-bottom: 8px;">
+                <i class="lni-checkmark-circle" style="color: #007BFF; margin-right: 5px;"></i>
+                500 MB of free disk space
+            </li>
+            <li>
+                <i class="lni-checkmark-circle" style="color: #007BFF; margin-right: 5px;"></i>
+                Stable network connection
+            </li>
+        </ul>
+    </div>
     <!-- Info Cards Container -->
     <div style="max-width: 1200px; margin: 0 auto;">
         <div class="info-cards">
@@ -311,7 +313,7 @@
                             <h4 class="title">Contact Us</h4>
                         </div>
                         <ul class="contact">
-<!--                            <li><a href="https://www.htlrennweg.at" style="color: white;">HTL Rennweg</a></li>-->
+                            <!--                            <li><a href="https://www.htlrennweg.at" style="color: white;">HTL Rennweg</a></li>-->
                             <li><a href="mailto:office@examx.at" style="color: white;">office@examx.at</a></li>
                             <li>Rennweg 89b<br>1030 Wien<br>Austria</li>
                         </ul>
@@ -358,9 +360,11 @@
         .then(response => response.json())
         .then(data => {
             document.getElementById('fileHash').textContent = data.hash;
+            document.getElementById('versionField').textContent = data.version;
         })
         .catch(error => {
             document.getElementById('fileHash').textContent = 'Error loading hash';
+            document.getElementById('versionField').textContent = 'Error loading version';
             console.error('Error fetching hash:', error);
         });
 </script>
